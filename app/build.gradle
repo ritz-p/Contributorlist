@@ -23,7 +23,9 @@ android {
         }
     }
     sourceSets {
-        main { assets.srcDirs = ['src/main/assets', 'src/main/assets/', 'src/main/assets/json'] }
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/', 'src/main/assets/json', 'src/main/assets/image']
+        }
     }
 }
 

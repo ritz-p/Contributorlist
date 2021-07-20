@@ -1,45 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <Space
         android:id="@+id/abovespace"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/contributor_names"
-        app:layout_constraintVertical_weight="1"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contributor_names"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abovespace"
-        app:layout_constraintBottom_toTopOf="@+id/all"
-        app:layout_constraintVertical_weight="20"
-        />
-
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/detail_list"/>
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/detail_list"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toBottomOf="@+id/abovespace"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintVertical_weight="20"
+       app:layout_constraintBottom_toTopOf="@+id/finish"
+       />
     <Button
-        android:id="@+id/all"
+        android:id="@+id/finish"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="@string/all"
+        android:text="@string/finish"
         app:layout_constraintBottom_toTopOf="@+id/belowspace"
-        app:layout_constraintTop_toBottomOf="@+id/contributor_names"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_weight="3"/>
+        app:layout_constraintTop_toBottomOf="@+id/detail_list"
+        app:layout_constraintVertical_weight="3"
+        />
     <Space
         android:id="@+id/belowspace"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/all"
+        app:layout_constraintTop_toBottomOf="@+id/finish"
         app:layout_constraintVertical_weight="1"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

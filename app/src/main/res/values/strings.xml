@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Contributorlist</string>
+    <string name="login">Login</string>
+    <string name="id">ID</string>
+    <string name="node_id">Node ID</string>
+    <string name="avatar_url">Avatar URL</string>
+    <string name="gravatar_id">Gravatar ID</string>
+    <string name="url">URL</string>
+    <string name="html_url">HTML URL</string>
+    <string name="followers_url">Followers URL</string>
+    <string name="following_url">Following URL</string>
+    <string name="gists_url">Gists URL</string>
+    <string name="starred_url">Starred URL</string>
+    <string name="subscriptions_url">Subscriptions URL</string>
+    <string name="organizations_url">Organizations URL</string>
+    <string name="repos_url">Repos URL</string>
+    <string name="events_url">Events URL</string>
+    <string name="received_events_url">Received Events URL</string>
+    <string name="type">Type</string>
+    <string name="site_admin">site admin</string>
+    <string name="contributions">contributions</string>
+    <string name="all">All</string>
+    <string name="finish">Finish</string>
 </resources>
