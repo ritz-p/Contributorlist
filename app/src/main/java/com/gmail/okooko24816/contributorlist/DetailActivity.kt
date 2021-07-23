@@ -35,7 +35,7 @@ class DetailActivity : AppCompatActivity(){
         val recyclerView:RecyclerView = findViewById(R.id.detail_list)
         val intent:Intent = intent
         val position:Int = intent.getIntExtra("position",10000)
-        if(position == 10000){
+        if(position == 10000 || position > MyApplication.contributors!!.size){
           for(i in 0 until MyApplication.contributors!!.size){
               contributors?.add(MyApplication.contributors!!.get(i))
           }

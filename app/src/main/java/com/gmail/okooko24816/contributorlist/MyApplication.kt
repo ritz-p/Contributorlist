@@ -67,41 +67,7 @@ class MyApplication : Application() {
         inputStream = assetManager.open("json/contributors.json")
         bufferReader = BufferedReader(InputStreamReader(inputStream))
         str = bufferReader.readText()
-
-            try{
-                val jsonArray = JSONArray(str)
-                for(i in 0 until jsonArray.length()){
-                    var jsonData = jsonArray.getJSONObject(i)
-                    var login = jsonData.getString("login")
-                    var id = jsonData.getString("id")
-                    Log.d("Check","$login,$id")
-                    val contributor = Contributor(
-                        jsonData.getString("login"),
-                        jsonData.getString("id"),
-                        jsonData.getString("node_id"),
-                        jsonData.getString("avatar_url"),
-                        jsonData.getString("gravatar_id"),
-                        jsonData.getString("url"),
-                        jsonData.getString("html_url"),
-                        jsonData.getString("followers_url"),
-                        jsonData.getString("following_url"),
-                        jsonData.getString("gists_url"),
-                        jsonData.getString("starred_url"),
-                        jsonData.getString("subscriptions_url"),
-                        jsonData.getString("organizations_url"),
-                        jsonData.getString("repos_url"),
-                        jsonData.getString("events_url"),
-                        jsonData.getString("received_events_url"),
-                        jsonData.getString("type"),
-                        jsonData.getString("site_admin"),
-                        jsonData.getString("contributions")
-                        )
-                    contributors?.add(contributor)
-                }
-                //contributors.
-        }catch(e:JSONException){
-            e.printStackTrace()
-        }
+        setContributors(contributors,str)
         Log.d("Count","${contributors?.size}")
     }
 }
